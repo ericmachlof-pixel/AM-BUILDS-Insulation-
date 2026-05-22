@@ -1,0 +1,162 @@
+<%- include('partials/head') %>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+<%- include('partials/preloader') %>
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<%- include('partials/header') %>
+
+<main id="main" role="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--short" aria-labelledby="contactHeroHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="hero__orb" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <span class="label-tag reveal-text">CONTACT</span>
+      <h1 class="page-hero__title split-heading" id="contactHeroHeading">Let's protect<br>your home.</h1>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="contact-section" aria-labelledby="contactFormHeading">
+    <div class="container contact-section__grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info reveal-up">
+        <h2 class="contact-info__title" id="contactFormHeading">Get in touch.</h2>
+        <p class="contact-info__sub">Free inspections. No obligation. We typically respond within 2 hours during business hours.</p>
+
+        <ul class="contact-info__list">
+          <li>
+            <div class="contact-info__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:<%= siteData.phone.replace(/\D/g,'') %>"><%= siteData.phone %></a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:<%= siteData.email %>"><%= siteData.email %></a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Service Area</strong>
+              <span><%= siteData.address %></span>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Hours</strong>
+              <span>Mon – Sat, 7:00 AM – 6:00 PM</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap reveal-up" style="--delay:0.15s">
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+
+          <!-- Honeypot (hidden from real users) -->
+          <div style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden;" aria-hidden="true">
+            <label for="_gotcha">Leave this field empty</label>
+            <input type="text" name="_gotcha" id="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="form-control" placeholder=" " required autocomplete="name" />
+              <label for="name" class="form-label">Full Name *</label>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="form-control" placeholder=" " required autocomplete="email" />
+              <label for="email" class="form-label">Email Address *</label>
+              <span class="form-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required autocomplete="tel" />
+              <label for="phone" class="form-label">Phone Number *</label>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <select id="service" name="service" class="form-control form-select" required aria-label="Service type">
+                <option value="" disabled selected></option>
+                <option value="Attic Insulation">Attic Insulation</option>
+                <option value="Wall Insulation">Wall Insulation</option>
+                <option value="Crawlspace Insulation">Crawlspace Insulation</option>
+                <option value="Spray Foam">Spray Foam</option>
+                <option value="Rat Proofing">Rat Proofing &amp; Rodent Exclusion</option>
+                <option value="Decontamination">Decontamination &amp; Restoration</option>
+                <option value="Multiple Services">Multiple Services</option>
+                <option value="Not Sure">Not Sure — Need Assessment</option>
+              </select>
+              <label for="service" class="form-label">Service Needed *</label>
+              <span class="form-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea id="message" name="message" class="form-control form-textarea" placeholder=" " required rows="5" aria-describedby="messageHelp"></textarea>
+            <label for="message" class="form-label">Tell us about your project *</label>
+            <span class="form-hint" id="messageHelp">Include your address, type of home, and any specific concerns.</span>
+            <span class="form-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn--orange btn--lg btn--magnetic form-submit" data-magnetic id="formSubmit">
+            <span class="btn-label">Send My Request</span>
+            <span class="btn-loading" aria-hidden="true">
+              <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              Sending…
+            </span>
+          </button>
+
+          <!-- Form response -->
+          <div class="form-response" id="formResponse" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Map embed -->
+    <div class="contact-map reveal-up">
+      <iframe
+        title="AM Builders service area map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019755849!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890"
+        width="100%" height="420" style="border:0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="/js/preloader.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/gsap-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+<script src="/js/contact-form.js" defer></script>
+</body>
+</html>

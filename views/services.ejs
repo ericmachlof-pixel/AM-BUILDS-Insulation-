@@ -1,0 +1,188 @@
+<%- include('partials/head') %>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+<%- include('partials/preloader') %>
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<%- include('partials/header') %>
+
+<main id="main" role="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="pageHeroHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="hero__orb" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <span class="label-tag reveal-text">OUR SERVICES</span>
+      <h1 class="page-hero__title split-heading" id="pageHeroHeading">Everything your<br>home needs.</h1>
+      <p class="page-hero__sub reveal-text">From attic to crawlspace, from the first entry point to the last square foot of insulation — AM Builders handles it all.</p>
+    </div>
+  </section>
+
+  <!-- ==================== INSULATION SERVICES ==================== -->
+  <section class="service-detail" id="attic" aria-labelledby="atticHeading">
+    <div class="container service-detail__grid">
+      <div class="service-detail__media">
+        <div class="service-detail__img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Attic insulation being installed" width="900" height="600" loading="lazy" />
+        </div>
+      </div>
+      <div class="service-detail__body">
+        <span class="service-detail__num" aria-hidden="true">01</span>
+        <span class="label-tag reveal-text">INSULATION</span>
+        <h2 class="service-detail__title split-heading" id="atticHeading">Attic &amp; Wall Insulation</h2>
+        <p class="service-detail__text reveal-text">Your attic is your home's biggest energy drain. We remove old, compromised insulation and install blown-in or batt insulation to California Title 24 standards — delivering R-38 to R-60 performance that slashes heating and cooling costs by up to 40%.</p>
+        <ul class="service-detail__list reveal-text">
+          <li>Blown-in fiberglass &amp; cellulose</li>
+          <li>Batt insulation (fiberglass &amp; mineral wool)</li>
+          <li>Complete attic air sealing</li>
+          <li>Vapor barrier installation</li>
+          <li>California Title 24 compliant</li>
+        </ul>
+        <a href="/contact" class="btn btn--orange btn--magnetic" data-magnetic>Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail service-detail--alt" id="spray-foam" aria-labelledby="sprayFoamHeading">
+    <div class="container service-detail__grid">
+      <div class="service-detail__body">
+        <span class="service-detail__num" aria-hidden="true">02</span>
+        <span class="label-tag reveal-text">INSULATION</span>
+        <h2 class="service-detail__title split-heading" id="sprayFoamHeading">Spray Foam &amp; Crawlspace</h2>
+        <p class="service-detail__text reveal-text">Closed-cell spray polyurethane foam (SPF) is the gold standard — it insulates, air-seals, and acts as a vapor barrier simultaneously. Our licensed technicians achieve perfect coverage in hard-to-reach areas no batt insulation can reach.</p>
+        <ul class="service-detail__list reveal-text">
+          <li>Open &amp; closed-cell spray foam</li>
+          <li>Crawlspace encapsulation</li>
+          <li>Under-floor insulation</li>
+          <li>Rim joist sealing</li>
+          <li>Moisture &amp; mold prevention</li>
+        </ul>
+        <a href="/contact" class="btn btn--orange btn--magnetic" data-magnetic>Get a Quote</a>
+      </div>
+      <div class="service-detail__media">
+        <div class="service-detail__img-wrap">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Spray foam insulation application" width="900" height="600" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RAT PROOFING SERVICES ==================== -->
+  <section class="service-detail" id="rat-proofing" aria-labelledby="ratProofHeading">
+    <div class="container service-detail__grid">
+      <div class="service-detail__media">
+        <div class="service-detail__img-wrap">
+          <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=900&q=80" alt="Rodent exclusion and sealing service" width="900" height="600" loading="lazy" />
+        </div>
+      </div>
+      <div class="service-detail__body">
+        <span class="service-detail__num" aria-hidden="true">03</span>
+        <span class="label-tag reveal-text">RAT PROOFING</span>
+        <h2 class="service-detail__title split-heading" id="ratProofHeading">Rodent Exclusion &amp; Rat Proofing</h2>
+        <p class="service-detail__text reveal-text">Rats need just a quarter-inch gap to enter. Our certified exclusion specialists conduct a complete perimeter audit — locating and permanently sealing every entry point with galvanized steel, hardware cloth, and professional-grade sealants that rodents cannot chew through.</p>
+        <ul class="service-detail__list reveal-text">
+          <li>Full perimeter exclusion audit</li>
+          <li>Galvanized steel mesh sealing</li>
+          <li>Foundation vents &amp; pipe sleeves</li>
+          <li>Roof-line and fascia sealing</li>
+          <li>Written guarantee — rodent-free or we return</li>
+        </ul>
+        <a href="/contact" class="btn btn--orange btn--magnetic" data-magnetic>Book Inspection</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-detail service-detail--alt" id="decontamination" aria-labelledby="deconHeading">
+    <div class="container service-detail__grid">
+      <div class="service-detail__body">
+        <span class="service-detail__num" aria-hidden="true">04</span>
+        <span class="label-tag reveal-text">RESTORATION</span>
+        <h2 class="service-detail__title split-heading" id="deconHeading">Decontamination &amp; Restoration</h2>
+        <p class="service-detail__text reveal-text">Rodents don't just damage insulation — they leave behind urine, droppings, and pathogens including Hantavirus. Our certified decontamination team removes all contaminated material, sanitizes the space with hospital-grade fogging agents, and restores your attic or crawlspace to pristine condition.</p>
+        <ul class="service-detail__list reveal-text">
+          <li>Full insulation removal &amp; disposal</li>
+          <li>HEPA vacuum &amp; fogging sanitation</li>
+          <li>Hantavirus-safe protocols</li>
+          <li>Odor elimination</li>
+          <li>Fresh insulation re-installation</li>
+        </ul>
+        <a href="/contact" class="btn btn--orange btn--magnetic" data-magnetic>Get a Quote</a>
+      </div>
+      <div class="service-detail__media">
+        <div class="service-detail__img-wrap">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=80" alt="Decontamination and attic restoration" width="900" height="600" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY US ==================== -->
+  <section class="why-us" aria-labelledby="whyUsHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">WHY AM BUILDERS</span>
+        <h2 class="section-title split-heading" id="whyUsHeading">The AM Builders difference.</h2>
+      </div>
+      <div class="why-us__grid">
+        <div class="why-card reveal-up">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Licensed &amp; Insured</h3>
+          <p>California CSLB licensed, fully insured, and certified. Every technician is background-checked and trained.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.1s">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Same-Week Service</h3>
+          <p>We know time matters. Most projects are scheduled within 3–5 business days of your free inspection.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.2s">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Written Guarantee</h3>
+          <p>Every rat proofing job comes with a written guarantee. If rodents return, so do we — at no charge.</p>
+        </div>
+        <div class="why-card reveal-up" style="--delay:0.3s">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>5-Star Track Record</h3>
+          <p>4,800+ homes served. A 4.9-star average across Yelp, Google, and HomeAdvisor speaks for itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-labelledby="ctaBannerHeading2">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2 class="cta-banner__headline split-heading" id="ctaBannerHeading2">Ready to get started?</h2>
+        <p class="cta-banner__sub reveal-text">Book your free, no-obligation inspection. We serve the Bay Area and Greater Los Angeles.</p>
+      </div>
+      <div class="cta-banner__action reveal-text">
+        <a href="/contact" class="btn btn--orange btn--xl btn--magnetic" data-magnetic>Book Free Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="/js/preloader.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/gsap-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

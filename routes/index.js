@@ -1,0 +1,40 @@
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.render('index', {
+    page: 'home',
+    title: 'AM Builders — California Insulation & Rat Proofing Experts',
+    description: 'AM Builders provides premium insulation and rodent exclusion services across California. Bay Area & Greater LA. Get a free inspection today.',
+    ogImage: '/img/og-home.jpg'
+  });
+});
+
+router.get('/services', (req, res) => {
+  res.render('services', {
+    page: 'services',
+    title: 'Our Services — Insulation & Rat Proofing | AM Builders',
+    description: 'Expert insulation (attic, wall, crawlspace, spray foam) and complete rodent exclusion services across California. Licensed, certified, trusted.',
+    ogImage: '/img/og-services.jpg'
+  });
+});
+
+router.get('/about', (req, res) => {
+  res.render('about', {
+    page: 'about',
+    title: 'About AM Builders — California\'s Premier Insulation Specialists',
+    description: 'Learn about AM Builders — our story, certifications, and the team delivering world-class insulation and rat proofing across California.',
+    ogImage: '/img/og-about.jpg'
+  });
+});
+
+router.get('/contact', (req, res) => {
+  res.render('contact', {
+    page: 'contact',
+    title: 'Contact AM Builders — Free Inspection',
+    description: 'Schedule your free inspection with AM Builders. We serve the Bay Area and Greater Los Angeles. Call or fill out our quick form.',
+    ogImage: '/img/og-contact.jpg'
+  });
+});
+
+module.exports = router;

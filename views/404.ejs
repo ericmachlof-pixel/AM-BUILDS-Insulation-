@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<%- include('partials/header') %>
+
+<main id="main" role="main" class="error-page">
+  <div class="noise" aria-hidden="true"></div>
+  <div class="hero__orb" aria-hidden="true"></div>
+
+  <div class="container error-page__inner">
+    <div class="error-page__num" aria-hidden="true">404</div>
+    <h1 class="error-page__title">Nothing to see here.<br>Literally.</h1>
+    <p class="error-page__sub">This page doesn't exist — but your home's energy leaks do. Let's fix those instead.</p>
+    <div class="error-page__ctas">
+      <a href="/" class="btn btn--orange btn--lg btn--magnetic" data-magnetic>Back to Home</a>
+      <a href="/contact" class="btn btn--ghost btn--lg">Get Free Inspection</a>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

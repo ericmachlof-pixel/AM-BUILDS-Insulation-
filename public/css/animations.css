@@ -1,0 +1,270 @@
+/* =========================================================
+   AM BUILDERS — ANIMATIONS CSS
+   ScrollTrigger reveals, transitions, magnetic, clip-path
+   ========================================================= */
+
+/* ---- Initial hidden states for GSAP reveals ---- */
+.reveal-text,
+.reveal-up,
+.split-heading .word {
+  opacity: 0;
+}
+
+.reveal-text {
+  transform: translateY(24px);
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+/* Split-heading words — set by JS */
+.split-heading .word {
+  display: inline-block;
+  transform: translateY(110%);
+  overflow: hidden;
+}
+
+/* Wrapper for word overflow clip */
+.word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+/* Hero words initial state */
+.hero__word--animate {
+  transform: translateY(110%);
+  opacity: 0;
+}
+
+/* ---- Animated in states ---- */
+.is-revealed {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none; /* GSAP controls this */
+}
+
+/* =========================================================
+   PAGE TRANSITION
+   ========================================================= */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--color-orange);
+  z-index: 9997;
+  transform-origin: left center;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* =========================================================
+   MAGNETIC BUTTON
+   ========================================================= */
+.btn--magnetic {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              background 0.2s,
+              box-shadow 0.2s,
+              border-color 0.2s;
+  will-change: transform;
+}
+
+/* =========================================================
+   SERVICE CARD — clip-path hover reveal
+   ========================================================= */
+.service-card .service-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 77, 162, 0.3) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 1;
+}
+
+.service-card:hover .service-card__media::after {
+  opacity: 1;
+}
+
+/* =========================================================
+   PRELOADER ANIMATIONS
+   ========================================================= */
+@keyframes preloaderLogo {
+  0%   { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.preloader__logo {
+  animation: preloaderLogo 0.6s var(--ease-out) both;
+}
+
+/* Curtain exit — class applied by JS after load */
+.preloader__curtain--exit-left {
+  animation: curtainLeft 0.8s 0.2s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+.preloader__curtain--exit-right {
+  animation: curtainRight 0.8s 0.35s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+@keyframes curtainLeft {
+  to { transform: translateX(-100%); }
+}
+@keyframes curtainRight {
+  to { transform: translateX(100%); }
+}
+
+/* =========================================================
+   SCROLL PROGRESS BAR (optional top bar)
+   ========================================================= */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--color-orange);
+  width: 0%;
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+/* =========================================================
+   HERO PARALLAX
+   ========================================================= */
+.hero__orb {
+  will-change: transform;
+}
+
+/* =========================================================
+   STAT NUMBER COUNTER ANIMATION
+   ========================================================= */
+.stat-num {
+  display: block;
+  transition: color 0.3s;
+}
+
+.stat-item.is-counting .stat-num {
+  color: var(--color-orange);
+}
+
+/* =========================================================
+   TESTIMONIAL DRAG CURSOR
+   ========================================================= */
+.testimonials__carousel.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-snap-type: none;
+}
+
+/* =========================================================
+   HORIZONTAL SCROLL PROCESS (pinned)
+   ========================================================= */
+.process__steps--pinned {
+  position: sticky;
+  top: 0;
+}
+
+/* =========================================================
+   FLOATING LABEL TRANSITIONS
+   ========================================================= */
+.form-group {
+  position: relative;
+}
+
+/* Select arrow */
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A8A8A' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+/* =========================================================
+   ORB FOLLOW MOUSE (subtle on hero)
+   ========================================================= */
+.hero__orb {
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* =========================================================
+   LINK UNDERLINE SLIDE
+   ========================================================= */
+.footer-links a {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 100%;
+  height: 1px;
+  background: var(--color-orange);
+  transition: right 0.3s var(--ease);
+}
+
+.footer-links a:hover::after { right: 0; }
+
+/* =========================================================
+   IMAGE CLIP-PATH REVEAL (on scroll)
+   ========================================================= */
+.service-detail__img-wrap {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.001s; /* GSAP overrides */
+}
+
+.service-detail__img-wrap.is-revealed {
+  clip-path: inset(0 0% 0 0);
+}
+
+.story__img-wrap {
+  clip-path: inset(0 0 100% 0);
+}
+
+.story__img-wrap.is-revealed {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* =========================================================
+   MOBILE MENU LINK STAGGER
+   ========================================================= */
+.mobile-menu.is-open .mobile-menu__link {
+  animation: menuLinkIn 0.5s var(--ease-out) both;
+}
+
+.mobile-menu.is-open .mobile-menu__list li:nth-child(1) .mobile-menu__link { animation-delay: 0.1s; }
+.mobile-menu.is-open .mobile-menu__list li:nth-child(2) .mobile-menu__link { animation-delay: 0.15s; }
+.mobile-menu.is-open .mobile-menu__list li:nth-child(3) .mobile-menu__link { animation-delay: 0.2s; }
+.mobile-menu.is-open .mobile-menu__list li:nth-child(4) .mobile-menu__link { animation-delay: 0.25s; }
+
+@keyframes menuLinkIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* =========================================================
+   REDUCED MOTION OVERRIDES
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-text,
+  .reveal-up,
+  .split-heading .word,
+  .hero__word--animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .service-detail__img-wrap,
+  .story__img-wrap {
+    clip-path: none !important;
+  }
+
+  .btn--magnetic {
+    transition: background 0.2s, box-shadow 0.2s !important;
+  }
+}

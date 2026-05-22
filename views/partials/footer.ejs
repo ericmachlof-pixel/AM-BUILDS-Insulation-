@@ -1,0 +1,78 @@
+<footer class="site-footer" role="contentinfo">
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="site-footer__top">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <!-- Brand col -->
+        <div class="site-footer__brand">
+          <a href="/" class="footer-logo" aria-label="AM Builders">
+            <span class="logo-am">AM</span><span class="logo-builders"> BUILDERS</span>
+          </a>
+          <p class="footer-tagline">California's Premier Insulation<br>& Rat Proofing Specialists.</p>
+          <div class="footer-socials">
+            <a href="<%= siteData.social.instagram %>" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="<%= siteData.social.facebook %>" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="<%= siteData.social.yelp %>" target="_blank" rel="noopener noreferrer" aria-label="Yelp" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.996 11.423c.323.147 3.092 1.384 3.441 1.688.349.305.538.69.472 1.176-.066.486-.447.881-.924 1.008l-3.23.865a.47.47 0 0 1-.566-.358.47.47 0 0 1 .03-.25l1.777-4.129zm-1.47-5.38c.396-.18.87-.065 1.14.29.27.354.27.843.001 1.197l-2.006 2.64a.47.47 0 0 1-.66.09.47.47 0 0 1-.165-.225L8.58 6.44a1.183 1.183 0 0 1 .754-1.398l2.192.001zM9.04 13.01l-3.432-.017c-.512-.003-.972-.34-1.11-.834-.137-.493.072-1.012.5-1.28l2.902-1.797a.47.47 0 0 1 .65.153.47.47 0 0 1 .07.244l.097 3.531zm-.68 3.18l2.41 2.509c.36.375.413.952.127 1.386-.287.435-.838.621-1.335.45l-3.158-1.094a1.184 1.184 0 0 1-.735-1.414l.124-.421 2.567-1.416zm5.89 1.273l-.11 3.292a1.184 1.184 0 0 1-.978 1.14c-.49.08-.972-.182-1.17-.638l-1.3-2.989a.47.47 0 0 1 .26-.614.47.47 0 0 1 .246-.023l3.052-.168z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services col -->
+        <div class="site-footer__col">
+          <h3 class="footer-col-head">Services</h3>
+          <ul class="footer-links">
+            <li><a href="/services#attic">Attic Insulation</a></li>
+            <li><a href="/services#wall">Wall Insulation</a></li>
+            <li><a href="/services#crawlspace">Crawlspace Insulation</a></li>
+            <li><a href="/services#spray-foam">Spray Foam</a></li>
+            <li><a href="/services#rat-proofing">Rat Proofing</a></li>
+            <li><a href="/services#decontamination">Decontamination</a></li>
+          </ul>
+        </div>
+
+        <!-- Company col -->
+        <div class="site-footer__col">
+          <h3 class="footer-col-head">Company</h3>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#team">Our Team</a></li>
+            <li><a href="/about#certifications">Certifications</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact col -->
+        <div class="site-footer__col">
+          <h3 class="footer-col-head">Contact</h3>
+          <ul class="footer-links footer-links--contact">
+            <li>
+              <a href="tel:<%= siteData.phone.replace(/\D/g, '') %>"><%= siteData.phone %></a>
+            </li>
+            <li>
+              <a href="mailto:<%= siteData.email %>"><%= siteData.email %></a>
+            </li>
+            <li><span><%= siteData.address %></span></li>
+          </ul>
+          <a href="/contact" class="btn btn--orange" style="margin-top:1.5rem;">Free Inspection</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom bar -->
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <p>&copy; <%= siteData.year %> AM Builders. All rights reserved.</p>
+      <p>Licensed &amp; Insured · California CSLB</p>
+    </div>
+  </div>
+</footer>

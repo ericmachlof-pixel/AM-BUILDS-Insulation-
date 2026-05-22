@@ -1,0 +1,406 @@
+<%- include('partials/head') %>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<%- include('partials/preloader') %>
+
+<!-- Page transition curtain -->
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+
+<!-- Header -->
+<%- include('partials/header') %>
+
+<main id="main" role="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <!-- Grain overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Blue orb glow -->
+    <div class="hero__orb" aria-hidden="true"></div>
+
+    <!-- Parallax BG -->
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow reveal-text">
+        <span>California's #1 Insulation &amp; Rat Proofing</span>
+      </div>
+
+      <h1 class="hero__headline" aria-label="Insulate. Seal. Protect.">
+        <span class="hero__word" data-word="INSULATE.">INSULATE.</span>
+        <span class="hero__word hero__word--accent" data-word="SEAL.">SEAL.</span>
+        <span class="hero__word" data-word="PROTECT.">PROTECT.</span>
+      </h1>
+
+      <p class="hero__sub reveal-text">
+        Premium insulation &amp; complete rodent exclusion for California homeowners.<br>
+        Bay Area · Greater Los Angeles · Statewide.
+      </p>
+
+      <div class="hero__ctas reveal-text">
+        <a href="/contact" class="btn btn--orange btn--lg btn--magnetic" data-magnetic>
+          Get Free Inspection
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/services" class="btn btn--ghost btn--lg">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+    <!-- Marquee strip -->
+    <div class="hero__marquee" aria-label="Our services">
+      <div class="marquee__track" aria-hidden="true">
+        <div class="marquee__inner">
+          <span>Attic Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Spray Foam</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Rat Proofing</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Crawlspace Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Wall Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Rodent Exclusion</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Decontamination</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Blown-In Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Batt Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <!-- Duplicate for seamless loop -->
+          <span>Attic Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Spray Foam</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Rat Proofing</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Crawlspace Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Wall Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Rodent Exclusion</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Decontamination</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Blown-In Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+          <span>Batt Insulation</span>
+          <span class="marquee__dot" aria-hidden="true">●</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO / ABOUT STRIP ===================== -->
+  <section class="intro" id="intro" aria-labelledby="introHeading">
+    <div class="container">
+      <div class="intro__grid">
+        <div class="intro__label reveal-text">
+          <span class="label-tag">WHO WE ARE</span>
+        </div>
+        <div class="intro__body">
+          <h2 class="intro__heading split-heading" id="introHeading">
+            We don't just insulate homes.<br>We <em>fortify</em> them.
+          </h2>
+          <p class="intro__text reveal-text">
+            AM Builders is California's trusted name in premium insulation and complete rodent exclusion. Founded by contractors who believed the industry deserved higher standards — we combine cutting-edge materials, certified craftsmanship, and a relentless attention to detail that big-box crews can't match.
+          </p>
+          <a href="/about" class="link-arrow reveal-text">
+            Our story
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="intro__badge reveal-text" aria-hidden="true">
+          <div class="badge-ring">
+            <span>15+</span>
+            <small>Years<br>Experience</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES GRID ===================== -->
+  <section class="services-section" id="services" aria-labelledby="servicesHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">WHAT WE DO</span>
+        <h2 class="section-title split-heading" id="servicesHeading">Precision. Every project.</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <article class="service-card" tabindex="0">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Attic insulation installation" width="800" height="600" loading="lazy" />
+            <div class="service-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__num" aria-hidden="true">01</span>
+            <h3 class="service-card__title">Attic &amp; Wall Insulation</h3>
+            <p class="service-card__desc">Batt, blown-in, and spray foam solutions that slash energy bills and keep comfort locked in year-round.</p>
+            <a href="/services#attic" class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card" tabindex="0">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Spray foam insulation" width="800" height="600" loading="lazy" />
+            <div class="service-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__num" aria-hidden="true">02</span>
+            <h3 class="service-card__title">Spray Foam &amp; Crawlspace</h3>
+            <p class="service-card__desc">Closed-cell spray foam and crawlspace encapsulation — the gold standard for moisture control and R-value.</p>
+            <a href="/services#spray-foam" class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card" tabindex="0">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=800&q=80" alt="Rat proofing and rodent exclusion" width="800" height="600" loading="lazy" />
+            <div class="service-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__num" aria-hidden="true">03</span>
+            <h3 class="service-card__title">Rat Proofing &amp; Exclusion</h3>
+            <p class="service-card__desc">We find every entry point, seal it permanently, and evict rodents for good — no traps, no repeat visits.</p>
+            <a href="/services#rat-proofing" class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card" tabindex="0">
+          <div class="service-card__media">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Decontamination and restoration" width="800" height="600" loading="lazy" />
+            <div class="service-card__overlay" aria-hidden="true"></div>
+          </div>
+          <div class="service-card__body">
+            <span class="service-card__num" aria-hidden="true">04</span>
+            <h3 class="service-card__title">Decontamination &amp; Restoration</h3>
+            <p class="service-card__desc">Full sanitation, old insulation removal, and clean reinstallation — we restore your attic to factory-fresh condition.</p>
+            <a href="/services#decontamination" class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process" id="process" aria-labelledby="processHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">HOW IT WORKS</span>
+        <h2 class="section-title split-heading" id="processHeading">Simple. Transparent. Done right.</h2>
+      </div>
+
+      <div class="process__steps">
+        <div class="process__step reveal-up">
+          <div class="process__step-num" aria-hidden="true">01</div>
+          <div class="process__step-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 class="process__step-title">Inspect</h3>
+          <p class="process__step-desc">Free on-site assessment. We evaluate insulation levels, moisture, and every potential rodent entry point.</p>
+        </div>
+
+        <div class="process__connector" aria-hidden="true"></div>
+
+        <div class="process__step reveal-up" style="--delay:0.1s">
+          <div class="process__step-num" aria-hidden="true">02</div>
+          <div class="process__step-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="process__step-title">Seal</h3>
+          <p class="process__step-desc">Every gap, crack, and opening is permanently sealed with professional-grade materials before we do anything else.</p>
+        </div>
+
+        <div class="process__connector" aria-hidden="true"></div>
+
+        <div class="process__step reveal-up" style="--delay:0.2s">
+          <div class="process__step-num" aria-hidden="true">03</div>
+          <div class="process__step-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="process__step-title">Insulate</h3>
+          <p class="process__step-desc">Premium insulation installed to exact California Title 24 specs — maximizing energy efficiency and comfort.</p>
+        </div>
+
+        <div class="process__connector" aria-hidden="true"></div>
+
+        <div class="process__step reveal-up" style="--delay:0.3s">
+          <div class="process__step-num" aria-hidden="true">04</div>
+          <div class="process__step-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="process__step-title">Protect</h3>
+          <p class="process__step-desc">Final walkthrough, documentation, and our written guarantee — your home is now insulated and fortified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats" id="stats" aria-labelledby="statsHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="container">
+      <h2 class="visually-hidden" id="statsHeading">Our results in numbers</h2>
+      <div class="stats__grid">
+        <div class="stat-item reveal-up">
+          <span class="stat-num" data-target="15" data-suffix="+">0</span>
+          <span class="stat-label">Years in Business</span>
+        </div>
+        <div class="stat-item reveal-up" style="--delay:0.1s">
+          <span class="stat-num" data-target="4800" data-suffix="+">0</span>
+          <span class="stat-label">Homes Protected</span>
+        </div>
+        <div class="stat-item reveal-up" style="--delay:0.2s">
+          <span class="stat-num" data-target="12" data-suffix="M+ sqft">0</span>
+          <span class="stat-label">Insulation Installed</span>
+        </div>
+        <div class="stat-item reveal-up" style="--delay:0.3s">
+          <span class="stat-num" data-target="5" data-suffix="★ Avg">0</span>
+          <span class="stat-label">Star Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">TESTIMONIALS</span>
+        <h2 class="section-title split-heading" id="testimonialsHeading">California homeowners trust us.</h2>
+      </div>
+
+      <div class="testimonials__carousel" id="testimonialsCarousel" role="list">
+
+        <div class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "AM Builders transformed our attic. Energy bills dropped by 30% the first month. Their rat proofing sealed every entry point we didn't even know existed."
+          </blockquote>
+          <cite class="testimonial-card__author">
+            <span class="author-name">Jessica M.</span>
+            <span class="author-loc">San Jose, CA</span>
+          </cite>
+        </div>
+
+        <div class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "Professional, fast, and incredibly thorough. They documented everything with photos before and after. Our crawlspace looks brand new."
+          </blockquote>
+          <cite class="testimonial-card__author">
+            <span class="author-name">David R.</span>
+            <span class="author-loc">Los Angeles, CA</span>
+          </cite>
+        </div>
+
+        <div class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "Had a severe rat infestation. AM Builders came in, sealed 23 entry points, cleaned the attic, and installed new insulation. Zero rodent issues since."
+          </blockquote>
+          <cite class="testimonial-card__author">
+            <span class="author-name">Sandra K.</span>
+            <span class="author-loc">Oakland, CA</span>
+          </cite>
+        </div>
+
+        <div class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "I've hired three insulation companies over the years. AM Builders is the only one that actually did what they promised, on time, and under budget."
+          </blockquote>
+          <cite class="testimonial-card__author">
+            <span class="author-name">Michael T.</span>
+            <span class="author-loc">Pasadena, CA</span>
+          </cite>
+        </div>
+
+        <div class="testimonial-card" role="listitem">
+          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+          <blockquote class="testimonial-card__quote">
+            "The spray foam in our garage has been a game changer. It's warmer in winter, cooler in summer, and completely quiet. Best home investment we've made."
+          </blockquote>
+          <cite class="testimonial-card__author">
+            <span class="author-name">Priya L.</span>
+            <span class="author-loc">Fremont, CA</span>
+          </cite>
+        </div>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <div class="testimonials__controls" aria-label="Carousel controls">
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next testimonial">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="cta-banner" id="cta" aria-labelledby="ctaHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <span class="label-tag label-tag--light reveal-text">LIMITED AVAILABILITY</span>
+        <h2 class="cta-banner__headline split-heading" id="ctaHeading">
+          Get a Free<br><em class="cta-accent">Inspection</em> Today.
+        </h2>
+        <p class="cta-banner__sub reveal-text">No obligation. No pushy sales. Just an honest assessment of your home's insulation and rodent vulnerability — on us.</p>
+      </div>
+      <div class="cta-banner__action reveal-text">
+        <a href="/contact" class="btn btn--orange btn--xl btn--magnetic" data-magnetic>
+          Book Your Free Inspection
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:8885550142" class="btn btn--ghost-light btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<%- include('partials/footer') %>
+
+<!-- Scripts -->
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<!-- Lenis smooth scroll CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+
+<script src="/js/preloader.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/gsap-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+
+</body>
+</html>

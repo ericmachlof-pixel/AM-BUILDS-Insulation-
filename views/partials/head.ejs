@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1A1A1A" />
+
+  <title><%= title %></title>
+  <meta name="description" content="<%= typeof description !== 'undefined' ? description : 'AM Builders — California Insulation & Rat Proofing Specialists.' %>" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.ambuildersca.com<%= typeof currentPath !== 'undefined' ? currentPath : '' %>" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= title %>" />
+  <meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'AM Builders — California Insulation & Rat Proofing Specialists.' %>" />
+  <meta property="og:image" content="https://www.ambuildersca.com<%= typeof ogImage !== 'undefined' ? ogImage : '/img/og-home.jpg' %>" />
+  <meta property="og:url" content="https://www.ambuildersca.com<%= typeof currentPath !== 'undefined' ? currentPath : '' %>" />
+  <meta property="og:site_name" content="AM Builders" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= title %>" />
+  <meta name="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'AM Builders — California Insulation & Rat Proofing Specialists.' %>" />
+  <meta name="twitter:image" content="https://www.ambuildersca.com<%= typeof ogImage !== 'undefined' ? ogImage : '/img/og-home.jpg' %>" />
+
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AM Builders",
+    "description": "California insulation and rat proofing specialists serving the Bay Area and Greater Los Angeles.",
+    "url": "https://www.ambuildersca.com",
+    "telephone": "<%= siteData.phone %>",
+    "email": "<%= siteData.email %>",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": ["San Francisco Bay Area", "Greater Los Angeles", "California"],
+    "priceRange": "$$",
+    "image": "https://www.ambuildersca.com/img/og-home.jpg",
+    "sameAs": [
+      "<%= siteData.social.instagram %>",
+      "<%= siteData.social.facebook %>",
+      "<%= siteData.social.yelp %>"
+    ]
+  }
+  </script>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Poppins Bold only -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+</head>
+<body class="is-loading" data-page="<%= page %>">

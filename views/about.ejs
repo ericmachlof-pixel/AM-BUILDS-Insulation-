@@ -1,0 +1,178 @@
+<%- include('partials/head') %>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+<%- include('partials/preloader') %>
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<%- include('partials/header') %>
+
+<main id="main" role="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="aboutHeroHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="hero__orb" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <span class="label-tag reveal-text">ABOUT US</span>
+      <h1 class="page-hero__title split-heading" id="aboutHeroHeading">Built on<br>craftsmanship.</h1>
+      <p class="page-hero__sub reveal-text">We started AM Builders because California homeowners deserved better — better materials, better technicians, better results.</p>
+    </div>
+  </section>
+
+  <!-- ==================== STORY ==================== -->
+  <section class="story" aria-labelledby="storyHeading">
+    <div class="container story__grid">
+      <div class="story__media reveal-up">
+        <div class="story__img-wrap">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="AM Builders team at work" width="900" height="700" loading="lazy" />
+        </div>
+        <div class="story__badge" aria-hidden="true">
+          <span class="badge-year">EST.</span>
+          <span class="badge-num">2009</span>
+        </div>
+      </div>
+      <div class="story__body">
+        <span class="label-tag reveal-text">OUR STORY</span>
+        <h2 class="story__title split-heading" id="storyHeading">From one truck to California's trusted name.</h2>
+        <p class="story__text reveal-text">AM Builders launched in 2009 with one truck, two certified technicians, and a simple promise: do the job right, or don't do it at all. Word spread quickly across the Bay Area. Homeowners told neighbors. Neighbors called us. And we grew — not through advertising, but through results.</p>
+        <p class="story__text reveal-text">Today we operate across Northern and Southern California with a fleet of specialized crews — each trained in insulation, rat proofing, and decontamination. We've protected over 4,800 homes and installed more than 12 million square feet of insulation. The truck count has grown. The promise hasn't changed.</p>
+        <div class="story__values reveal-text">
+          <div class="value-chip">Certified Craftsmanship</div>
+          <div class="value-chip">Transparent Pricing</div>
+          <div class="value-chip">Guaranteed Results</div>
+          <div class="value-chip">Family-Owned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEAM ==================== -->
+  <section class="team" id="team" aria-labelledby="teamHeading">
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">OUR TEAM</span>
+        <h2 class="section-title split-heading" id="teamHeading">The people behind the work.</h2>
+      </div>
+      <div class="team__grid">
+
+        <div class="team-card reveal-up">
+          <div class="team-card__photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Alex Martinez, Founder & CEO" width="400" height="500" loading="lazy" />
+          </div>
+          <div class="team-card__body">
+            <h3 class="team-card__name">Alex Martinez</h3>
+            <span class="team-card__role">Founder &amp; CEO</span>
+            <p class="team-card__bio">15+ years in insulation and building envelope. CSLB licensed contractor, BPI certified building analyst.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal-up" style="--delay:0.1s">
+          <div class="team-card__photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Marcus Williams, Lead Technician" width="400" height="500" loading="lazy" />
+          </div>
+          <div class="team-card__body">
+            <h3 class="team-card__name">Marcus Williams</h3>
+            <span class="team-card__role">Lead Field Technician</span>
+            <p class="team-card__bio">Spray foam specialist with 10 years experience. Trained in Hantavirus safety protocols and rodent exclusion.</p>
+          </div>
+        </div>
+
+        <div class="team-card reveal-up" style="--delay:0.2s">
+          <div class="team-card__photo">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Priya Sharma, Operations Manager" width="400" height="500" loading="lazy" />
+          </div>
+          <div class="team-card__body">
+            <h3 class="team-card__name">Priya Sharma</h3>
+            <span class="team-card__role">Operations Manager</span>
+            <p class="team-card__bio">Keeps every project on schedule and every client informed. 8 years coordinating residential and commercial jobs.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATIONS ==================== -->
+  <section class="certifications" id="certifications" aria-labelledby="certHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="label-tag reveal-text">CREDENTIALS</span>
+        <h2 class="section-title split-heading" id="certHeading">Certified. Licensed. Trusted.</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-item reveal-up">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <h3>CSLB Licensed</h3>
+          <p>California State License Board — General Contractor License</p>
+        </div>
+        <div class="cert-item reveal-up" style="--delay:0.1s">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>BPI Certified</h3>
+          <p>Building Performance Institute — Building Analyst Certification</p>
+        </div>
+        <div class="cert-item reveal-up" style="--delay:0.2s">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Title 24 Compliant</h3>
+          <p>All insulation work meets California Energy Code requirements</p>
+        </div>
+        <div class="cert-item reveal-up" style="--delay:0.3s">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3>OSHA Trained</h3>
+          <p>All crew members are OSHA 10 &amp; 30 trained for job site safety</p>
+        </div>
+        <div class="cert-item reveal-up" style="--delay:0.4s">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Fully Insured</h3>
+          <p>$2M general liability + workers' comp on every job</p>
+        </div>
+        <div class="cert-item reveal-up" style="--delay:0.5s">
+          <div class="cert-item__icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          </div>
+          <h3>Hantavirus Certified</h3>
+          <p>Certified in safe rodent fecal matter removal and decontamination</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-labelledby="aboutCtaHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2 class="cta-banner__headline split-heading" id="aboutCtaHeading">Meet us on-site.</h2>
+        <p class="cta-banner__sub reveal-text">Schedule your free inspection and meet the team that's been protecting California homes since 2009.</p>
+      </div>
+      <div class="cta-banner__action reveal-text">
+        <a href="/contact" class="btn btn--orange btn--xl btn--magnetic" data-magnetic>Book Free Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="/js/preloader.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/gsap-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
