@@ -1,7 +1,7 @@
 {
   "name": "ambuilders",
   "version": "1.0.0",
-  "description": "AM Builders — Insulation & Rat Proofing California",
+  "description": "Insulara — Insulation & Rat Proofing California",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

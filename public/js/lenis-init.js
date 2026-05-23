@@ -1,5 +1,5 @@
-/* =========================================================
-   LENIS SMOOTH SCROLL — AM Builders
+﻿/* =========================================================
+   LENIS SMOOTH SCROLL â€” Insulara
    ========================================================= */
 (function () {
   'use strict';
@@ -71,3 +71,4 @@
   initLenis();
   window.addEventListener('load', initLenis, { once: true });
 })();
+

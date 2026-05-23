@@ -24,16 +24,16 @@ app.use((req, res, next) => {
 
 // Shared site data injected into every render
 app.locals.siteData = {
-  name: 'AM Builders',
+  name: 'Insulara',
   tagline: 'Insulation & Rat Proofing',
   phone: '(888) 555-0142',
-  email: 'info@ambuildersca.com',
+  email: 'info@insulara.com',
   address: 'Serving the Bay Area & Greater Los Angeles, California',
   year: new Date().getFullYear(),
   social: {
-    instagram: 'https://instagram.com/ambuildersca',
-    facebook: 'https://facebook.com/ambuildersca',
-    yelp: 'https://yelp.com/biz/am-builders-california'
+    instagram: 'https://instagram.com/insulara',
+    facebook: 'https://facebook.com/insulara',
+    yelp: 'https://yelp.com/biz/insulara-california'
   }
 };
 
@@ -46,7 +46,7 @@ app.use('/contact', contactRouter);
 
 // Sitemap
 app.get('/sitemap.xml', (req, res) => {
-  const base = `https://www.ambuildersca.com`;
+  const base = `https://www.insulara.com`;
   const pages = ['', '/services', '/about', '/contact'];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -57,20 +57,20 @@ ${pages.map(p => `  <url><loc>${base}${p}</loc><changefreq>monthly</changefreq><
 
 // Robots
 app.get('/robots.txt', (req, res) => {
-  res.type('text/plain').send(`User-agent: *\nAllow: /\nSitemap: https://www.ambuildersca.com/sitemap.xml`);
+  res.type('text/plain').send(`User-agent: *\nAllow: /\nSitemap: https://www.insulara.com/sitemap.xml`);
 });
 
 // 404
 app.use((req, res) => {
   res.status(404).render('404', {
     page: '404',
-    title: '404 — Page Not Found | AM Builders',
-    description: 'Page not found. Return home and explore AM Builders insulation and rat proofing services.',
+    title: '404 — Page Not Found | Insulara',
+    description: 'Page not found. Return home and explore Insulara insulation and rat proofing services.',
     ogImage: '/img/og-home.jpg'
   });
 });
 
 // Start
 app.listen(PORT, () => {
-  console.log(`\n🏗  AM Builders running → http://localhost:${PORT}\n`);
+  console.log(`\n🏗  Insulara running → http://localhost:${PORT}\n`);
 });

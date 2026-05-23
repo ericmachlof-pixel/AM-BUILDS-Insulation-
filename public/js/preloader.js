@@ -1,6 +1,6 @@
-/* =========================================================
-   PRELOADER — AM Builders
-   Counts 0→100%, then curtain-wipes the screen away.
+﻿/* =========================================================
+   PRELOADER â€” Insulara
+   Counts 0â†’100%, then curtain-wipes the screen away.
    ========================================================= */
 (function () {
   'use strict';
@@ -39,7 +39,7 @@
   }
 
   function revealSite() {
-    // GSAP curtain wipe — if GSAP loaded, use it; else CSS fallback
+    // GSAP curtain wipe â€” if GSAP loaded, use it; else CSS fallback
     if (window.gsap) {
       const tl = window.gsap.timeline({
         onComplete: () => {
@@ -87,7 +87,8 @@
     start_();
   } else {
     window.addEventListener('load', start_);
-    // Safety — start after 200ms regardless (avoids stall on slow CDN)
+    // Safety â€” start after 200ms regardless (avoids stall on slow CDN)
     setTimeout(start_, 200);
   }
 })();
+

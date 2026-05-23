@@ -31,9 +31,8 @@ router.post('/', limiter, async (req, res) => {
     return res.status(422).json({ success: false, errors });
   }
 
-  // Nodemailer transport (compatible with v6–v8)
-  const createFn = nodemailer.createTransport || nodemailer.createTransporter;
-  const transporter = createFn({
+  // Nodemailer transport
+  const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT) || 587,
     secure: parseInt(process.env.SMTP_PORT) === 465,
@@ -44,13 +43,13 @@ router.post('/', limiter, async (req, res) => {
   });
 
   const mailOptions = {
-    from: `"AM Builders Website" <${process.env.SMTP_USER}>`,
-    to: process.env.CONTACT_TO || 'info@ambuildersca.com',
+    from: `"Insulara Website" <${process.env.SMTP_USER}>`,
+    to: process.env.CONTACT_TO || 'info@insulara.com',
     replyTo: email,
     subject: `New Inquiry — ${service} | ${name}`,
     html: `
       <div style="font-family:sans-serif;max-width:600px;margin:0 auto;">
-        <h2 style="background:#0A4DA2;color:#fff;padding:20px;margin:0;">New Contact Form Submission</h2>
+        <h2 style="background:#0A4DA2;color:#fff;padding:20px;margin:0;">New Contact Form Submission — Insulara</h2>
         <div style="padding:24px;background:#f9f9f9;">
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
@@ -60,7 +59,7 @@ router.post('/', limiter, async (req, res) => {
           <p><strong>Message:</strong></p>
           <p style="white-space:pre-wrap;">${message}</p>
         </div>
-        <p style="padding:16px;font-size:12px;color:#888;">Sent from ambuildersca.com</p>
+        <p style="padding:16px;font-size:12px;color:#888;">Sent from insulara.com</p>
       </div>
     `
   };

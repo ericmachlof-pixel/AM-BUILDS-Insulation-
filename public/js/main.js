@@ -1,5 +1,5 @@
-/* =========================================================
-   MAIN.JS — AM Builders
+﻿/* =========================================================
+   MAIN.JS â€” Insulara
    Nav, mobile menu, magnetic buttons, testimonial
    carousel, page transitions, misc interactions.
    ========================================================= */
@@ -99,7 +99,7 @@
   }
 
   // =========================================================
-  // TESTIMONIALS CAROUSEL — drag + button scroll
+  // TESTIMONIALS CAROUSEL â€” drag + button scroll
   // =========================================================
   const carousel = document.getElementById('testimonialsCarousel');
   const prevBtn  = document.getElementById('carouselPrev');
@@ -266,3 +266,4 @@
   }
 
 })();
+

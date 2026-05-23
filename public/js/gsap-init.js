@@ -1,5 +1,5 @@
-/* =========================================================
-   GSAP + ScrollTrigger ANIMATIONS — AM Builders
+﻿/* =========================================================
+   GSAP + ScrollTrigger ANIMATIONS â€” Insulara
    Hero word split, scroll reveals, stat counters,
    clip-path image reveals, parallax orb.
    ========================================================= */
@@ -56,11 +56,11 @@
     gsap.set('.hero__eyebrow, .hero__sub, .hero__ctas', { opacity: 0, y: 20 });
 
     document.addEventListener('preloaderDone', animateHero, { once: true });
-    // Fallback — fire even if preloader event was missed
+    // Fallback â€” fire even if preloader event was missed
     setTimeout(animateHero, 2400);
 
     // -----------------------------------------------------------
-    // 2. SPLIT HEADING — word-by-word reveal on scroll
+    // 2. SPLIT HEADING â€” word-by-word reveal on scroll
     // -----------------------------------------------------------
     function splitAndReveal(heading) {
       const text = heading.textContent;
@@ -145,7 +145,7 @@
     });
 
     // -----------------------------------------------------------
-    // 5. SERVICE CARDS — stagger
+    // 5. SERVICE CARDS â€” stagger
     // -----------------------------------------------------------
     const serviceCards = document.querySelectorAll('.service-card');
     if (serviceCards.length) {
@@ -274,7 +274,7 @@
     }
 
     // -----------------------------------------------------------
-    // 11. PROCESS STEP — STAGGER
+    // 11. PROCESS STEP â€” STAGGER
     // -----------------------------------------------------------
     const processSteps = document.querySelectorAll('.process__step');
     if (processSteps.length) {
@@ -295,7 +295,7 @@
     }
 
     // -----------------------------------------------------------
-    // 12. HORIZONTAL MARQUEE — speed on scroll
+    // 12. HORIZONTAL MARQUEE â€” speed on scroll
     // -----------------------------------------------------------
     const marqueeInner = document.querySelector('.marquee__inner');
     if (marqueeInner) {
@@ -321,3 +321,4 @@
     document.addEventListener('DOMContentLoaded', () => setTimeout(init, 50));
   }
 })();
+

@@ -1,5 +1,5 @@
-/* =========================================================
-   CUSTOM CURSOR — AM Builders
+﻿/* =========================================================
+   CUSTOM CURSOR â€” Insulara
    Orange dot + ghost ring, scales on hover.
    ========================================================= */
 (function () {
@@ -71,3 +71,4 @@
     follower.style.opacity = '';
   });
 })();
+
