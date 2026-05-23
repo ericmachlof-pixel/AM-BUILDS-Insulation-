@@ -32,26 +32,28 @@ router.post('/', limiter, async (req, res) => {
     return res.status(422).json({ success: false, errors });
   }
 
-  // ── 1. Persist to Supabase ────────────────────────────────────────────────
-  const ip = req.headers['x-forwarded-for']?.split(',')[0].trim()
-          || req.socket?.remoteAddress
-          || null;
+  // ── 1. Persist to Supabase (if configured) ───────────────────────────────
+  if (supabase) {
+    const ip = req.headers['x-forwarded-for']?.split(',')[0].trim()
+            || req.socket?.remoteAddress
+            || null;
 
-  const { error: dbError } = await supabase
-    .from('contact_submissions')
-    .insert({
-      name:       name.trim(),
-      email:      email.trim().toLowerCase(),
-      phone:      phone.trim(),
-      service,
-      message:    message.trim(),
-      ip_address: ip,
-      status:     'new',
-    });
+    const { error: dbError } = await supabase
+      .from('contact_submissions')
+      .insert({
+        name:       name.trim(),
+        email:      email.trim().toLowerCase(),
+        phone:      phone.trim(),
+        service,
+        message:    message.trim(),
+        ip_address: ip,
+        status:     'new',
+      });
 
-  if (dbError) {
-    // Log but don't block — still try to send the email
-    console.error('Supabase insert error:', dbError.message);
+    if (dbError) {
+      // Log but don't block — still try to send the email
+      console.error('Supabase insert error:', dbError.message);
+    }
   }
 
   // ── 2. Send email via Nodemailer ──────────────────────────────────────────
@@ -93,15 +95,13 @@ router.post('/', limiter, async (req, res) => {
     await transporter.sendMail(mailOptions);
   } catch (mailErr) {
     console.error('Mail error:', mailErr);
-    // If DB insert succeeded but mail failed, still return success
-    // (submission is saved — team can follow up from the dashboard)
-    if (!dbError) {
+    // If Supabase saved it, still return success
+    if (supabase) {
       return res.json({
         success: true,
         message: "Your message was saved! We'll be in touch within 24 hours.",
       });
     }
-    // Both DB and mail failed
     return res.status(500).json({
       success: false,
       error: 'Failed to send message. Please call us directly.',

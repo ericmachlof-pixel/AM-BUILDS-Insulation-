@@ -2,16 +2,22 @@ const express  = require('express');
 const router   = express.Router();
 const supabase = require('../lib/supabase');
 
-// Home — testimonials pulled live from Supabase
+// Home — testimonials pulled live from Supabase (falls back to empty if DB not configured)
 router.get('/', async (req, res) => {
-  const { data: testimonials, error } = await supabase
-    .from('testimonials')
-    .select('id, author_name, location, quote, stars')
-    .eq('is_active', true)
-    .order('sort_order', { ascending: true });
+  let testimonials = [];
 
-  if (error) {
-    console.error('Supabase testimonials error:', error.message);
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('testimonials')
+      .select('id, author_name, location, quote, stars')
+      .eq('is_active', true)
+      .order('sort_order', { ascending: true });
+
+    if (error) {
+      console.error('Supabase testimonials error:', error.message);
+    } else {
+      testimonials = data || [];
+    }
   }
 
   res.render('index', {
@@ -19,7 +25,7 @@ router.get('/', async (req, res) => {
     title:        'Insulara — California Insulation & Rat Proofing Experts',
     description:  'Insulara provides premium insulation and rodent exclusion services across California. Bay Area & Greater LA. Get a free inspection today.',
     ogImage:      '/img/og-home.jpg',
-    testimonials: testimonials || [],
+    testimonials,
   });
 });
 
