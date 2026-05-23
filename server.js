@@ -1,6 +1,5 @@
-// Load .env first (local dev), then .env.production (never overrides already-set vars)
 require('dotenv').config();
-require('dotenv').config({ path: '.env.production', override: false });
+require('dotenv').config({ path: '.env.production' });
 
 const express = require('express');
 const path    = require('path');
@@ -75,13 +74,7 @@ app.use((req, res) => {
 
 // Start
 app.listen(PORT, () => {
-  console.log(`\n🏗  Insulara running → http://localhost:${PORT}`);
-  console.log(`\n── Env diagnostics ──────────────────────`);
-  console.log(`   SUPABASE_URL   : ${process.env.NEXT_PUBLIC_SUPABASE_URL      ? '✅ set' : '❌ missing'}`);
-  console.log(`   SUPABASE_KEY   : ${process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ? '✅ set' : '❌ missing'}`);
-  console.log(`   SMTP_HOST      : ${process.env.SMTP_HOST ? '✅ ' + process.env.SMTP_HOST : '❌ missing'}`);
-  console.log(`   SMTP_USER      : ${process.env.SMTP_USER ? '✅ ' + process.env.SMTP_USER : '❌ missing'}`);
-  console.log(`   SMTP_PASS      : ${process.env.SMTP_PASS ? '✅ set' : '❌ missing'}`);
-  console.log(`   CONTACT_TO     : ${process.env.CONTACT_TO || '(default: info@insulara.com)'}`);
-  console.log(`─────────────────────────────────────────\n`);
+  console.log('Insulara server running on port ' + PORT);
+  console.log('SUPABASE: ' + (process.env.NEXT_PUBLIC_SUPABASE_URL ? 'connected' : 'not configured'));
+  console.log('SMTP: ' + (process.env.SMTP_HOST ? process.env.SMTP_HOST : 'not configured'));
 });
