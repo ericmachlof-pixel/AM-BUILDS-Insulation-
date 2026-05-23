@@ -290,60 +290,26 @@
 
       <div class="testimonials__carousel" id="testimonialsCarousel" role="list">
 
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "Insulara transformed our attic. Energy bills dropped by 30% the first month. Their rat proofing sealed every entry point we didn't even know existed."
-          </blockquote>
-          <cite class="testimonial-card__author">
-            <span class="author-name">Jessica M.</span>
-            <span class="author-loc">San Jose, CA</span>
-          </cite>
-        </div>
-
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "Professional, fast, and incredibly thorough. They documented everything with photos before and after. Our crawlspace looks brand new."
-          </blockquote>
-          <cite class="testimonial-card__author">
-            <span class="author-name">David R.</span>
-            <span class="author-loc">Los Angeles, CA</span>
-          </cite>
-        </div>
-
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "Had a severe rat infestation. Insulara came in, sealed 23 entry points, cleaned the attic, and installed new insulation. Zero rodent issues since."
-          </blockquote>
-          <cite class="testimonial-card__author">
-            <span class="author-name">Sandra K.</span>
-            <span class="author-loc">Oakland, CA</span>
-          </cite>
-        </div>
-
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "I've hired three insulation companies over the years. Insulara is the only one that actually did what they promised, on time, and under budget."
-          </blockquote>
-          <cite class="testimonial-card__author">
-            <span class="author-name">Michael T.</span>
-            <span class="author-loc">Pasadena, CA</span>
-          </cite>
-        </div>
-
-        <div class="testimonial-card" role="listitem">
-          <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
-          <blockquote class="testimonial-card__quote">
-            "The spray foam in our garage has been a game changer. It's warmer in winter, cooler in summer, and completely quiet. Best home investment we've made."
-          </blockquote>
-          <cite class="testimonial-card__author">
-            <span class="author-name">Priya L.</span>
-            <span class="author-loc">Fremont, CA</span>
-          </cite>
-        </div>
+        <% if (testimonials && testimonials.length > 0) { %>
+          <% testimonials.forEach(function(t) { %>
+            <div class="testimonial-card" role="listitem">
+              <div class="testimonial-card__stars" aria-label="<%= t.stars %> stars">
+                <%- '★'.repeat(t.stars) + '☆'.repeat(5 - t.stars) %>
+              </div>
+              <blockquote class="testimonial-card__quote">
+                "<%= t.quote %>"
+              </blockquote>
+              <cite class="testimonial-card__author">
+                <span class="author-name"><%= t.author_name %></span>
+                <% if (t.location) { %>
+                  <span class="author-loc"><%= t.location %></span>
+                <% } %>
+              </cite>
+            </div>
+          <% }); %>
+        <% } else { %>
+          <p style="color:var(--color-grey-3);padding:2rem 0;">No testimonials available yet.</p>
+        <% } %>
 
       </div>
 
