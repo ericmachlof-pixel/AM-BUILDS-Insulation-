@@ -29,7 +29,7 @@ app.locals.siteData = {
   tagline: 'Insulation & Rat Proofing',
   phone: '(888) 555-0142',
   email: 'info@insulara.com',
-  address: 'Serving the Bay Area & Greater Los Angeles, California',
+  address: 'Serving Los Angeles County, California',
   year: new Date().getFullYear(),
   social: {
     instagram: 'https://instagram.com/insulara',
