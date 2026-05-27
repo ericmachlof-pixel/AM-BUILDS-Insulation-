@@ -13,6 +13,10 @@ app.set('views', path.join(__dirname, 'views'));
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Auto-deploy webhook (must be before body parsers)
+const deployRouter = require('./routes/deploy');
+app.use('/deploy', deployRouter);
+
 // Body parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
