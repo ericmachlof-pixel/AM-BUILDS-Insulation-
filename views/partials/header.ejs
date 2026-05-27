@@ -10,8 +10,8 @@
       <ul class="nav-list">
         <li><a href="/" class="nav-link<%= page === 'home' ? ' is-active' : '' %>">Home</a></li>
         <li><a href="/services" class="nav-link<%= page === 'services' ? ' is-active' : '' %>">Services</a></li>
-        <li class="nav-dropdown<%= ['service-areas','los-angeles','ventura-county','orange-county'].includes(page) ? ' is-active' : '' %>">
-          <a href="/service-areas" class="nav-link nav-dropdown__toggle<%= ['service-areas','los-angeles','ventura-county','orange-county'].includes(page) ? ' is-active' : '' %>">
+        <li class="nav-dropdown<%= ['service-areas','los-angeles','ventura-county','orange-county','san-bernardino'].includes(page) ? ' is-active' : '' %>">
+          <a href="/service-areas" class="nav-link nav-dropdown__toggle<%= ['service-areas','los-angeles','ventura-county','orange-county','san-bernardino'].includes(page) ? ' is-active' : '' %>">
             Service Areas
             <svg class="nav-dropdown__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
@@ -21,6 +21,7 @@
             <li role="none"><a href="/los-angeles" class="nav-dropdown__item<%= page === 'los-angeles' ? ' is-active' : '' %>" role="menuitem">Los Angeles</a></li>
             <li role="none"><a href="/ventura-county" class="nav-dropdown__item<%= page === 'ventura-county' ? ' is-active' : '' %>" role="menuitem">Ventura County</a></li>
             <li role="none"><a href="/orange-county" class="nav-dropdown__item<%= page === 'orange-county' ? ' is-active' : '' %>" role="menuitem">Orange County</a></li>
+            <li role="none"><a href="/san-bernardino" class="nav-dropdown__item<%= page === 'san-bernardino' ? ' is-active' : '' %>" role="menuitem">San Bernardino</a></li>
           </ul>
         </li>
         <li><a href="/about" class="nav-link<%= page === 'about' ? ' is-active' : '' %>">About</a></li>
@@ -51,6 +52,7 @@
             <li><a href="/los-angeles" class="mobile-menu__link mobile-menu__link--sub">Los Angeles</a></li>
             <li><a href="/ventura-county" class="mobile-menu__link mobile-menu__link--sub">Ventura County</a></li>
             <li><a href="/orange-county" class="mobile-menu__link mobile-menu__link--sub">Orange County</a></li>
+            <li><a href="/san-bernardino" class="mobile-menu__link mobile-menu__link--sub">San Bernardino</a></li>
           </ul>
         </li>
         <li><a href="/about" class="mobile-menu__link">About</a></li>

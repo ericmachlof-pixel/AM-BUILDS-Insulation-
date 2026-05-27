@@ -63,6 +63,15 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/san-bernardino', (req, res) => {
+  res.render('san-bernardino', {
+    page:        'san-bernardino',
+    title:       'Insulation & Rat Proofing San Bernardino | Insulara',
+    description: 'Insulara serves San Bernardino County with attic insulation and rodent exclusion. Rancho Cucamonga, Fontana, Redlands, Ontario, Yucaipa and more. Free inspection.',
+    ogImage:     '/img/og-home.jpg',
+  });
+});
+
 router.get('/service-areas', (req, res) => {
   res.render('service-areas', {
     page:        'service-areas',
