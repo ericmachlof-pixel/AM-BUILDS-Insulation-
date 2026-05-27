@@ -63,6 +63,15 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/orange-county', (req, res) => {
+  res.render('orange-county', {
+    page:        'orange-county',
+    title:       'Insulation & Rat Proofing Orange County | Insulara',
+    description: 'Insulara serves Orange County homeowners with attic insulation upgrades and permanent rodent exclusion. Irvine, Anaheim, Mission Viejo, Yorba Linda and more. Free inspection.',
+    ogImage:     '/img/og-home.jpg',
+  });
+});
+
 router.get('/ventura-county', (req, res) => {
   res.render('ventura-county', {
     page:        'ventura-county',
