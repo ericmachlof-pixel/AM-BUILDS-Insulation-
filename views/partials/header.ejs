@@ -10,6 +10,17 @@
       <ul class="nav-list">
         <li><a href="/" class="nav-link<%= page === 'home' ? ' is-active' : '' %>">Home</a></li>
         <li><a href="/services" class="nav-link<%= page === 'services' ? ' is-active' : '' %>">Services</a></li>
+        <li class="nav-dropdown<%= ['los-angeles','ventura-county','orange-county'].includes(page) ? ' is-active' : '' %>">
+          <button class="nav-link nav-dropdown__toggle" aria-haspopup="true" aria-expanded="false" id="serviceAreasBtn">
+            Service Areas
+            <svg class="nav-dropdown__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown__menu" role="menu" aria-labelledby="serviceAreasBtn">
+            <li role="none"><a href="/los-angeles" class="nav-dropdown__item<%= page === 'los-angeles' ? ' is-active' : '' %>" role="menuitem">Los Angeles</a></li>
+            <li role="none"><a href="/ventura-county" class="nav-dropdown__item<%= page === 'ventura-county' ? ' is-active' : '' %>" role="menuitem">Ventura County</a></li>
+            <li role="none"><a href="/orange-county" class="nav-dropdown__item<%= page === 'orange-county' ? ' is-active' : '' %>" role="menuitem">Orange County</a></li>
+          </ul>
+        </li>
         <li><a href="/about" class="nav-link<%= page === 'about' ? ' is-active' : '' %>">About</a></li>
         <li><a href="/contact" class="nav-link<%= page === 'contact' ? ' is-active' : '' %>">Contact</a></li>
       </ul>
@@ -32,6 +43,14 @@
       <ul class="mobile-menu__list">
         <li><a href="/" class="mobile-menu__link">Home</a></li>
         <li><a href="/services" class="mobile-menu__link">Services</a></li>
+        <li class="mobile-menu__group">
+          <span class="mobile-menu__group-label">Service Areas</span>
+          <ul class="mobile-menu__sub">
+            <li><a href="/los-angeles" class="mobile-menu__link mobile-menu__link--sub">Los Angeles</a></li>
+            <li><a href="/ventura-county" class="mobile-menu__link mobile-menu__link--sub">Ventura County</a></li>
+            <li><a href="/orange-county" class="mobile-menu__link mobile-menu__link--sub">Orange County</a></li>
+          </ul>
+        </li>
         <li><a href="/about" class="mobile-menu__link">About</a></li>
         <li><a href="/contact" class="mobile-menu__link">Contact</a></li>
       </ul>

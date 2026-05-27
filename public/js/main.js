@@ -49,6 +49,39 @@
   }
 
   // =========================================================
+  // SERVICE AREAS DROPDOWN
+  // =========================================================
+  const dropdownParent = document.querySelector('.nav-dropdown');
+  const dropdownToggle = document.querySelector('.nav-dropdown__toggle');
+  const dropdownMenu   = document.querySelector('.nav-dropdown__menu');
+
+  if (dropdownParent && dropdownToggle && dropdownMenu) {
+    // Toggle on click
+    dropdownToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdownParent.classList.toggle('is-open');
+      dropdownToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', () => {
+      dropdownParent.classList.remove('is-open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdownParent.classList.remove('is-open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Keep open when clicking inside menu
+    dropdownMenu.addEventListener('click', (e) => e.stopPropagation());
+  }
+
+  // =========================================================
   // NAV ACTIVE LINK (non-GSAP fallback)
   // =========================================================
   const currentPath = window.location.pathname;
