@@ -63,6 +63,15 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/los-angeles', (req, res) => {
+  res.render('los-angeles', {
+    page:        'los-angeles',
+    title:       'Insulation & Rat Proofing Los Angeles | Insulara',
+    description: 'Insulara provides expert attic insulation and rodent exclusion in Los Angeles. Cut your LADWP bill by up to 40% and permanently seal out roof rats. Free inspection.',
+    ogImage:     '/img/og-home.jpg',
+  });
+});
+
 router.get('/contact', (req, res) => {
   res.render('contact', {
     page:        'contact',
