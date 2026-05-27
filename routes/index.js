@@ -63,6 +63,15 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/service-areas', (req, res) => {
+  res.render('service-areas', {
+    page:        'service-areas',
+    title:       'Service Areas — Los Angeles, Ventura & Orange County | Insulara',
+    description: 'Insulara serves Los Angeles County, Ventura County, and Orange County with expert attic insulation and rodent exclusion. Find your area and book a free inspection.',
+    ogImage:     '/img/og-home.jpg',
+  });
+});
+
 router.get('/orange-county', (req, res) => {
   res.render('orange-county', {
     page:        'orange-county',

@@ -1,0 +1,96 @@
+<%- include('partials/head') %>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+<%- include('partials/preloader') %>
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<%- include('partials/header') %>
+
+<main id="main" role="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--short" aria-labelledby="areasHeroHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="hero__orb" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <span class="label-tag reveal-text">SERVICE AREAS</span>
+      <h1 class="page-hero__title split-heading" id="areasHeroHeading">Where we work.</h1>
+      <p class="page-hero__sub reveal-text">Insulara serves Los Angeles County and surrounding regions. Select your area below to see local information, common issues, and what we can do for your home.</p>
+    </div>
+  </section>
+
+  <!-- AREAS GRID -->
+  <section class="areas-section" aria-labelledby="areasGridHeading">
+    <div class="container">
+      <h2 class="sr-only" id="areasGridHeading">Service area pages</h2>
+      <div class="areas-grid">
+
+        <a href="/los-angeles" class="area-card reveal-up">
+          <div class="area-card__badge">Los Angeles</div>
+          <h2 class="area-card__title">Los Angeles</h2>
+          <p class="area-card__desc">Attic insulation that cuts your LADWP bill. Permanent rat exclusion for LA's older housing stock. Serving all of Los Angeles County.</p>
+          <ul class="area-card__topics">
+            <li>Energy efficiency &amp; LADWP bill reduction</li>
+            <li>Roof rat exclusion &amp; soffit sealing</li>
+            <li>Attic decontamination &amp; restoration</li>
+          </ul>
+          <span class="area-card__cta">See Los Angeles page <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/ventura-county" class="area-card reveal-up" style="--delay:0.1s">
+          <div class="area-card__badge">Ventura County</div>
+          <h2 class="area-card__title">Ventura County</h2>
+          <p class="area-card__desc">1960s–70s ranch homes running hot. Citrus trees feeding roof rats. We know this county and we know these houses.</p>
+          <ul class="area-card__topics">
+            <li>Simi Valley, Thousand Oaks, Oxnard</li>
+            <li>Camarillo, Ventura, Ojai, Moorpark</li>
+            <li>SCE bill reduction &amp; rodent exclusion</li>
+          </ul>
+          <span class="area-card__cta">See Ventura County page <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a href="/orange-county" class="area-card reveal-up" style="--delay:0.2s">
+          <div class="area-card__badge">Orange County</div>
+          <h2 class="area-card__title">Orange County</h2>
+          <p class="area-card__desc">Newer tract homes with minimum-code insulation. Canyon-edge rat pressure. Tile roofs with more entry points than you'd expect.</p>
+          <ul class="area-card__topics">
+            <li>Irvine, Mission Viejo, Yorba Linda</li>
+            <li>Anaheim Hills, Laguna Niguel, Lake Forest</li>
+            <li>Insulation upgrades &amp; tile roof exclusion</li>
+          </ul>
+          <span class="area-card__cta">See Orange County page <span aria-hidden="true">→</span></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" aria-labelledby="areasCtaHeading">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cta-banner__bg" aria-hidden="true"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2 class="cta-banner__headline split-heading" id="areasCtaHeading">Not sure which area?<br>Just call us.</h2>
+        <p class="cta-banner__sub reveal-text">We serve all of Los Angeles County and surrounding regions. If you're not sure we cover your city, reach out — we'll tell you straight.</p>
+      </div>
+      <div class="cta-banner__action reveal-text">
+        <a href="/contact" class="btn btn--orange btn--xl btn--magnetic" data-magnetic>Book Free Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="/js/preloader.js" defer></script>
+<script src="/js/cursor.js" defer></script>
+<script src="/js/lenis-init.js" defer></script>
+<script src="/js/gsap-init.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
