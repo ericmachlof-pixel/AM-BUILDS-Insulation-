@@ -2035,6 +2035,16 @@ em { font-style: normal; color: var(--color-orange); }
 /* ── Floating label in form ──────────────────────────── */
 .form-label { color: var(--color-grey-3); }
 
+/* ── City page — section intro paragraph ─────────────── */
+.section-intro {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: var(--color-grey-3);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
 /* ── City page — stat strip ──────────────────────────── */
 .city-stats {
   display: flex;

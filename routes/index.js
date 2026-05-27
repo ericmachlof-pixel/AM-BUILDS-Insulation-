@@ -63,6 +63,15 @@ router.get('/about', (req, res) => {
   });
 });
 
+router.get('/ventura-county', (req, res) => {
+  res.render('ventura-county', {
+    page:        'ventura-county',
+    title:       'Insulation & Rat Proofing Ventura County | Insulara',
+    description: 'Insulara serves Ventura County homeowners with attic insulation and permanent rodent exclusion. Simi Valley, Thousand Oaks, Oxnard, Ventura, Camarillo. Free inspection.',
+    ogImage:     '/img/og-home.jpg',
+  });
+});
+
 router.get('/los-angeles', (req, res) => {
   res.render('los-angeles', {
     page:        'los-angeles',
