@@ -2142,7 +2142,7 @@ em { font-style: normal; color: var(--color-orange); }
 }
 .nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 0.75rem);
+  top: calc(100% + 0.4rem);
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
   min-width: 200px;
@@ -2155,8 +2155,18 @@ em { font-style: normal; color: var(--color-orange); }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  /* delay on close so mouse can travel from link to menu */
+  transition: opacity 0.15s ease 0.18s, transform 0.15s ease 0.18s, visibility 0.15s 0.18s;
   z-index: 200;
+}
+/* Invisible bridge that fills the gap so hover isn't lost mid-travel */
+.nav-dropdown__menu::before {
+  content: '';
+  position: absolute;
+  top: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
 }
 .nav-dropdown:hover .nav-dropdown__menu,
 .nav-dropdown:focus-within .nav-dropdown__menu {
@@ -2164,6 +2174,8 @@ em { font-style: normal; color: var(--color-orange); }
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
+  /* no delay on open */
+  transition: opacity 0.15s ease 0s, transform 0.15s ease 0s, visibility 0.15s 0s;
 }
 .nav-dropdown__item {
   display: block;
